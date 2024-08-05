@@ -1,3 +1,4 @@
+
 generator client {
   provider = "prisma-client-js"
 }
@@ -10,7 +11,7 @@ datasource db {
 model User {
   id        String    @id @default(uuid())
   email     String    @unique
-  name      String
+  name      String 
   booking   Booking[]
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
@@ -22,21 +23,21 @@ model Barbershop {
   address     String
   phone       String[]
   description String
-  imageUrl    String
+  imageUrl    String 
   createdAt   DateTime            @default(now())
   updatedAt   DateTime            @updatedAt
   services    BarbershopService[]
 }
 
 model BarbershopService {
-  id           String     @id @default(uuid())
-  name         String
-  description  String
-  imageUrl     String
-  price        Decimal    @db.Decimal(10, 2)
-  barbershopId String
-  barbershop   Barbershop @relation(fields: [barbershopId], references: [id])
-  bookings     Booking[]
+   id           String     @id @default(uuid())
+   name         String
+   description  String
+   imageUrl     String
+   price        Decimal    @db.Decimal(10, 2)
+   barbershopId String
+   barbershop   Barbershop @relation(fields: [barbershopId], references: [id])
+   bookings     Booking[]
 }
 
 model Booking {
