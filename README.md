@@ -1,3 +1,5 @@
+    X
+
 --Setup banco
 --Sending do banco (colocar dados)
 -- [] introdução ao next.js
