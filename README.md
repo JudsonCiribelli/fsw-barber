@@ -1,4 +1,4 @@
-X7G2
+X7G2M
 
 --Setup banco
 --Sending do banco (colocar dados)
