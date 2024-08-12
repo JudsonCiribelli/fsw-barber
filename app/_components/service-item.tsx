@@ -13,7 +13,7 @@ import {
 import { Calendar } from "./ui/calendar"
 import { ptBR } from "date-fns/locale"
 import { useEffect, useState } from "react"
-import { addDays, format, set } from "date-fns"
+import { format, set } from "date-fns"
 import { createBooking } from "../_actions/create-booking"
 import { useSession } from "next-auth/react"
 import { toast } from "sonner"
@@ -53,6 +53,7 @@ const getTimeList = (bookings: Booking[]) => {
   return TIME_LIST.filter((time) => {
     const hour = Number(time.split(":")[0])
     const minutes = Number(time.split(":")[1])
+    //Não exibir horarios ja agendados
     const hasBookingOnCurrentTime = bookings.some(
       (booking) =>
         booking.date.getHours() === hour &&
