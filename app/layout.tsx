@@ -4,7 +4,7 @@ import "./globals.css"
 import { Toaster } from "sonner"
 import { Card, CardContent } from "./_components/ui/card"
 import Footer from "./_components/footer"
-import AuthProvider from "./api/auth/[...nextauth]/_providers/auth"
+import AuthProvider from "./api/auth/[...nextauth]/providers/auth"
 
 const inter = Inter({ subsets: ["latin"] })
 
